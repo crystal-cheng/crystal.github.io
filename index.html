@@ -24,13 +24,22 @@
   <div id="container">
       <div id="dowebok">
           <div class="section section1">
+            <div class="top_banner" id="elem-ui">
+                  <el-menu :default-active="activeIndex" class="el-menu-demo"
+                    mode="horizontal"  background-color="#545c64"
+                    text-color="#fff" active-text-color="#ffd04b">
+                    <el-menu-item index="1"><a>首页</a></el-menu-item>
+                    <el-menu-item index="2"><a>博客</a></el-menu-item>
+                    <el-menu-item index="3"><a>个人信息</a></el-menu-item>
+                  </el-menu>
+                </div>
               <div class="left_content">
                 <div class="user_avatar">
                   
                 </div>
                 <div class="user_info"></div>
               </div>
-              <div class="aside">
+              <div class="right-contnet">
                 <div class="title"></div>
                 <div class="blog_content"></div>
               </div>
@@ -42,6 +51,19 @@
               
           </div>
           <div class="section section4">
+              
+          </div>
+
+          <div class="section section5">
+              
+          </div>
+          <div class="section section6">
+              
+          </div>
+          <div class="section section7">
+              
+          </div>
+          <div class="section section8">
               
           </div>
       </div>
@@ -67,12 +89,17 @@
    $('#dowebok').fullpage({
     navigation: true,
     navigationColor: '#000',
-    navigationTooltips: ['首页','项目经验','工作经历','知识分享'],
+    navigationTooltips: ['首页','项目经验','工作经历','知识分享','待定','暂时不知道','以后再说','未完待续....'],
     slidesNavigation: true,
     loopBottom: true
    });
-  //  new Vue({
-  //    el: '#banner'
-  //  })
+   new Vue({
+      el: '#dowebok',
+      data() {
+        return {
+          activeIndex: '1',
+        };
+      }
+   })
  </script>
 </html>
