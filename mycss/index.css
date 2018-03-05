@@ -82,8 +82,8 @@
     width: 25%;
     height: 60%;
     box-shadow: 1px 2px 3px #ddd;
-    background: #fff;
-    margin-right: 100px;
+    /* background: #fff; */
+    margin-right: 50px;
 }
 .user_avatar{
     display: block;
@@ -126,13 +126,35 @@
 /* 右侧部分 */
 .right-contnet {
     position: absolute;
-    background: #4680ff;
-    right:5%;
+    background: #fff;
+    right:15%;
     top: calc(6% + 70px);
-    width: calc(65% - 100px);
+    width: calc(55% - 50px);
     height: 100%;
-    border: 1px solid #ccc;
     box-shadow: 1px 2px 3px #ddd;
+    padding: 10px;
+}
+.title{
+    text-align: center;
+    font-size: 24px;
+    color: #838499;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #e7e7eb;
+}
+.blog_time{
+    display: inline-block;
+    float: right;
+    font-size: 16px;
+    line-height: 40px;
+    margin-right: 50px;
+}
+.blog_content p{
+    text-indent: 32px;
+    font-size: 16px;
+    color: #4a5353;
+    line-height: 30px;
 }
 
 /* 右侧部分 */
