@@ -30,6 +30,7 @@
 }
 .el-menu-item a {
     display: block;
+    position: absolute;
     z-index: 100 !important;
 }
 .el-menu-item:after {
