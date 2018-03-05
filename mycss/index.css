@@ -114,6 +114,14 @@
     color: #b3b3b3;
     margin: 8px 0 4px 0;
 }
+.user_content {
+    margin-left: 20%;
+    margin-top: 20px;
+    width: 60%;
+}
+.search-input {
+    margin-bottom: 10px;
+}
 /* 左侧部分 */
 /* 右侧部分 */
 .right-contnet {

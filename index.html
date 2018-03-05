@@ -24,27 +24,39 @@
 <body>
   <div id="container">
       <div id="dowebok">
-          <div class="section section1">
-            <div class="top_banner" id="elem-ui">
-                  <el-menu :default-active="activeIndex" class="el-menu-demo"
-                    mode="horizontal"  background-color="#545c64"
-                    text-color="#fff" active-text-color="#ffd04b">
-                    <el-menu-item index="1"><a>首页</a></el-menu-item>
-                    <el-menu-item index="2"><a>博客</a></el-menu-item>
-                    <el-menu-item index="3"><a>个人信息</a></el-menu-item>
-                  </el-menu>
-                  <div class="banner_title">云倾城的个人博客 | crystal.cheng</div>
-              </div>
-              <div class="left_content">
-                <div class="user_info">
-                  <img class="user_avatar" src="123.jpg"></img>
-                  <div class="user_name">云倾城<i class="iconfont icon-nv"></i></div>
-                  <p class="user_signname">有事做，有人爱，有所期待</p>
-                  <el-rate v-model="value"></el-rate>
+            <div class="section section1">
+                <div class="top_banner" id="elem-ui">
+                    <el-menu :default-active="activeIndex" class="el-menu-demo"
+                        mode="horizontal"  background-color="#545c64"
+                        text-color="#fff" active-text-color="#ffd04b">
+                        <el-menu-item index="1"><a>首页</a></el-menu-item>
+                        <el-menu-item index="2"><a>博客</a></el-menu-item>
+                        <el-menu-item index="3"><a>个人信息</a></el-menu-item>
+                    </el-menu>
+                    <div class="banner_title">云倾城的个人博客 | crystal.cheng</div>
                 </div>
-                <div class="user_content">
-
-                </div>
+                <div class="left_content">
+                    <div class="user_info">
+                          <img class="user_avatar" src="123.jpg"></img>
+                          <div class="user_name">云倾城<i class="iconfont icon-nv"></i></div>
+                          <p class="user_signname">有事做，有人爱，有所期待</p>
+                          <el-rate v-model="value"></el-rate>
+                    </div>
+                    <div class="user_content">
+                        <el-input class="search-input"
+                            placeholder="输入关键字进行过滤"
+                            v-model="filterText">
+                        </el-input>
+                  
+                        <el-tree
+                            class="filter-tree"
+                            :data="data2"
+                            :props="defaultProps"
+                            default-expand-all
+                            :filter-node-method="filterNode"
+                            ref="tree2">
+                        </el-tree>
+                    </div>
               </div>
               <div class="right-contnet">
                 <div class="title"></div>
@@ -115,6 +127,71 @@
           value: 3,
         }
       }
-   })
+   });
+   new Vue({
+      el: '.user_content',
+      watch: {
+        filterText(val) {
+          this.$refs.tree2.filter(val);
+        }
+      },
+  
+      methods: {
+        filterNode(value, data) {
+          if (!value) return true;
+          return data.label.indexOf(value) !== -1;
+        }
+      },
+  
+      data() {
+        return {
+          filterText: '',
+          data2: [{
+            id: 1,
+            label: 'JavaScript',
+            children: [{
+              id: 4,
+              label: 'JavaScript分享',
+            }]
+          }, {
+            id: 2,
+            label: 'CSS',
+            children: [{
+              id: 5,
+              label: 'CSS分享1'
+            }, {
+              id: 6,
+              label: 'CSS分享22222'
+            }]
+          }, {
+            id: 3,
+            label: 'HTML',
+            children: [{
+              id: 7,
+              label: 'HTML分享1'
+            }, {
+              id: 8,
+              label: 'HTML分享12322'
+            }]
+          },
+          {
+            id: 3,
+            label: 'Node',
+            children: [{
+              id: 7,
+              label: 'Node分享1'
+            }, {
+              id: 8,
+              label: 'Node分享12322'
+            }]
+          }],
+          defaultProps: {
+            children: 'children',
+            label: 'label'
+          }
+        };
+      }
+   });
+   
  </script>
 </html>
