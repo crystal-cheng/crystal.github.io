@@ -1,8 +1,18 @@
 /* 模块一 */
 .section1{
-    /* background: url("images/banner1.jpg") center #000; */
-    background-color: #f1f1f1;
-    position: relative;
+    /* background: url("images/01.jpg") center #000 no-repeat; */
+    /* background-color:#74727E ; */
+    background:#cebe29;
+	background:-moz-linear-gradient(-45deg,#cebe29 0,#9b1f50 33%,#2989d8 71%,#89b4ff 91%);
+	background:-webkit-gradient(linear,left top,right bottom,color-stop(0%,#cebe29),color-stop(33%,#9b1f50),color-stop(71%,#2989d8),color-stop(91%,#89b4ff));
+	background:-webkit-linear-gradient(-45deg,#cebe29 0,#9b1f50 33%,#2989d8 71%,#89b4ff 91%);
+	background:-o-linear-gradient(-45deg,#cebe29 0,#9b1f50 33%,#2989d8 71%,#89b4ff 91%);
+	background:-ms-linear-gradient(-45deg,#cebe29 0,#9b1f50 33%,#2989d8 71%,#89b4ff 91%);
+	background:linear-gradient(135deg,#cebe29 0,#9b1f50 33%,#2989d8 71%,#89b4ff 91%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#cebe29',endColorstr='#89b4ff',GradientType=1);
+	-webkit-background-size:100% 100%;
+	-moz-background-size:100% 100%;
+	background-size:100% 100%
 }
 /* 顶部部分 */
 .top_banner {
@@ -74,88 +84,157 @@
 /* 顶部部分 */
 
 /* 左侧部分 */
-.left_content {
+.content {
     position: absolute;
-    text-align: center;
-    left:5%;
-    top: calc(6% + 70px);
-    width: 25%;
+    padding: 50px 20px 20px 50px;
+    left:20%;
+    top: calc(6% + 100px);
+    width: 60%;
     height: 60%;
     box-shadow: 1px 2px 3px #ddd;
-    /* background: #fff; */
-    margin-right: 50px;
+    opacity: 0.9;
+    background: #fff;
+}
+.user_info{
+    float: left;
+    width: 30%;
+    height: 100%;
+    text-align: center;
 }
 .user_avatar{
     display: block;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
+    width: 120px;
+    height: 120px;
     margin: 0 auto;
+    border-radius: 50%;
     box-shadow: 1px 2px 3px #ddd;
 }
 .user_name{
-    height: 30px;
+    height: 25px;
     margin: 0 auto;
-    line-height: 30px;
+    line-height: 25px;
     font-size: 20px;
-    text-align: center;
-    margin-top: 10px;
     color: #8b8282;
+    margin-top: 17px;
 }
 .icon-nv {
     display: inline-block;
     margin-left: 8px;
     color: #ef6651;
 }
-.user_signname {
+.user_signname, .user_job, user_github  {
     font-size: 14px;
-    height: 18px;
-    line-height: 18px;
-    color: #b3b3b3;
+    height: 30px;
+    line-height: 30px;
+    color: #100f0f;;
     margin: 8px 0 4px 0;
 }
-.user_content {
-    margin-left: 20%;
-    margin-top: 20px;
-    width: 60%;
+.user_skill {
+    margin-left: 50px;
+    height: 100%; 
 }
-.search-input {
-    margin-bottom: 10px;
+.skill_title {
+    display: block;
+    font-size: 20px !important;
+    color: #201e1e !important;
+    height: 35px;
+}
+.skill_container {
+    /* width: 300px; */
+    font-size: 1.2em;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 6px 6px 24px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    margin:30px auto;
+  }
+.skill_container .skill {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    height: 80px;
+    padding: 0px 20px;
+    transition: all 0.3s;
+    color: white;
+}
+
+.skill_container .skill.skill_one {
+    background-color: #7986CB;
+}
+.skill_container .skill.skill_two {
+    background-color: #FF8A65;
+}
+.skill_container .skill.skill_three {
+    background-color: #F06292;
+}
+.skill_container .skill.skill_four {
+    background-color: #4DB6AC;
+}
+.skill_container .skill.skill_five {
+    background-color: #7986CB;
+}
+.skill_container .skill .name h4, .skill_container .skill .name h5 {
+    font-weight: 300;
+  }
+.skill_container .skill .name h5 {
+    font-size: 0em;
+    line-height: 1;
+  }
+.skill_container .skill p {
+    font-size: 0.8em;
+    font-weight: 300;
+  }
+.skill_container .skill:before {
+    content: "";
+    height: 0px;
+    width: 0px;
+    border: 2px solid white;
+    border-radius: 50%;
+    margin-left: -50%;
+    background-color: white;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+.skill_container .skill.skill_one:before{
+    background-image: url("images/js.jpg");
+}
+.skill_container .skill.skill_two:before{
+    background-image: url("images/html5.jpg");
+}
+.skill_container .skill.skill_three:before{
+    background-image: url("images/css3.jpg");
+}
+.skill_container .skill.skill_four:before{
+    background-image: url("images/node.jpg");
+}
+.skill_container .skill.skill_five:before{
+    background-image: url("images/vue.jpg");
+}
+
+.skill_container .skill:hover:before {
+    content: "";
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin-left: 0%;
+    transition: all 0.4s;
+  }
+.skill_container .skill:hover {
+    height: 120px;
+    transition: all 0.3s;
+  }
+.skill_container .skill:hover .name h5 {
+    font-size: 0.7em;
+    transition: all 0.6s;
+  }
+.skill_container .iconfont {
+    color: #fff;
+    font-size: 14px;
 }
 /* 左侧部分 */
-/* 右侧部分 */
-.right-contnet {
-    position: absolute;
-    background: #fff;
-    right:15%;
-    top: calc(6% + 70px);
-    width: calc(55% - 50px);
-    height: 100%;
-    box-shadow: 1px 2px 3px #ddd;
-    padding: 10px;
-}
-.title{
-    text-align: center;
-    font-size: 24px;
-    color: #838499;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding-bottom: 8px;
-    border-bottom: 1px solid #e7e7eb;
-}
-.blog_time{
-    display: inline-block;
-    float: right;
-    font-size: 16px;
-    line-height: 40px;
-    margin-right: 50px;
-}
-.blog_content p{
-    text-indent: 32px;
-    font-size: 16px;
-    color: #4a5353;
-    line-height: 30px;
-}
+
 
 /* 右侧部分 */
 /* 模块一 */

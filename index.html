@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <title>云倾城的个人博客</title>
@@ -14,82 +15,43 @@
   <link rel="icon" href="favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="css/style.css">
-   <!-- 引入element-ui样式 -->
-   <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
-   <link rel="stylesheet" href="mycss/index.css">
-   <link rel="stylesheet" href="mycss/iconfont/iconfont.css">
-   <link rel="stylesheet" href="jquery-fullPage/css/index.css">
+  <!-- 引入element-ui样式 -->
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+  <link rel="stylesheet" href="mycss/index.css">
+  <link rel="stylesheet" href="mycss/iconfont/iconfont.css">
+  <link rel="stylesheet" href="jquery-fullPage/css/index.css">
 </head>
 
 <body>
   <div id="container">
-      <div id="dowebok">
-            <div class="section section1">
-                <div class="top_banner" id="elem-ui">
-                    <el-menu :default-active="activeIndex" class="el-menu-demo"
-                        mode="horizontal"  background-color="#545c64"
-                        text-color="#fff" active-text-color="#ffd04b">
-                        <el-menu-item index="1"><a>首页</a></el-menu-item>
-                        <el-menu-item index="2"><a>博客</a></el-menu-item>
-                        <el-menu-item index="3"><a>个人信息</a></el-menu-item>
-                    </el-menu>
-                    <div class="banner_title">云倾城的个人博客 | crystal.cheng</div>
+    <div id="dowebok">
+      <div class="section section1">
+        <div class="content">
+            <div class="user_info">
+                <img class="user_avatar" src="123.jpg"></img>
+                <div class="user_name">云倾城
+                  <i class="iconfont icon-nv"></i>
                 </div>
-                <div class="left_content">
-                    <div class="user_info">
-                          <img class="user_avatar" src="123.jpg"></img>
-                          <div class="user_name">云倾城<i class="iconfont icon-nv"></i></div>
-                          <p class="user_signname">有事做，有人爱，有所期待</p>
-                          <el-rate v-model="value"></el-rate>
-                    </div>
-                    <div class="user_content">
-                        <el-input class="search-input"
-                            placeholder="输入关键字进行过滤"
-                            v-model="filterText">
-                        </el-input>
-                  
-                        <el-tree
-                            class="filter-tree"
-                            :data="data2"
-                            :props="defaultProps"
-                            default-expand-all
-                            :filter-node-method="filterNode"
-                            ref="tree2">
-                        </el-tree>
-                    </div>
+                <!-- <p class="user_signname">有事做，有人爱，有所期待</p> -->
+                <p class="user_job">web前端工程师</p>
+                <p class="user_job">3年工作经历</p>
+                <!-- <p class="user_github">https://github.com/crystal-cheng</p> -->
+            </div>
+            <div class="user_skill" id="user_skill">
+              <span class="skill_title">技术栈:</span>
+              <div class="skill_container">
+                <div v-for="skill in skills" class="skill" :class="skill.classIndex">
+                  <div class="name">
+                    <h4>{{skill.skill_name}}</h4>
+                    <h5>{{skill.content}}</h5>
+                  </div>
+                  <i class="iconfont icon-nv" :class="skill.icon"></i>
+                </div>		
               </div>
-              <div class="right-contnet">
-                <div class="title">JavaScript装逼指南
-                <span class="blog_time">2018-03-05</span>
-                </div>
-                
-                <div class="blog_content">
-                    <p>Javascript 基础语法包括：变量声明、数据类型、函数、控制语句、内置对象等。</p>
-                    
-                    <p>在ES5 中，变量声明有两种方式，分别是  var 和 function ，var
-                        用于声明普通的变量，接收任意类型，function用于声明函数。另外，ES6 新增了 let、const、import 和 class
-                        等四个命令，分别用以声明 普通变量、静态变量、模块 和 类 。</p>
-                    
-                    <p>JS数据类型共有六种，分别是 String、Number、Boolean、Null、Undefined 和 Object 等， 另外，ES6新增了
-                        Symbol 类型。其中，Object 是引用类型，其他的都是原始类型(Primitive Type)。</p>
-                    
-                    <p>原始类型也称为基本类型或简单类型，因为其占据空间固定，是简单的数据段，为了便于提升变量查询速度，将其存储在栈(stack)中(按值访问)。为了便于操作这类数据，ECMAScript
-                        提供了 3 个 基本包装类型 ：Boolean、Number 和 String 。
-                        基本包装类型是一种特殊的引用类型，每当读取一个基本类型值的时候，JS内部就会创建一个对应的包装对象，从而可以调用一些方法来操作这些数据。
-                        引用类型由于其值的大小会改变，所以不能将其存放在栈中，否则会降低变量查询速度，因此其存储在堆(heap)中，存储在变量处的值是一个指针，指向存储对象的内存处(按址访问)，对于引用类型的值，可以为其添加属性和方法，也可以改变和删除其属性和方法；但基本类型不可以添加属性和方法。
-                    </p>
-                    
-                    <p>Javascript 可以通过 typeof 来判断原始数据类型，但不能判断引用类型，要知道引用类型的具体类型，需要通过 Object 原型上的
-                        toString 方法来判断。</p>
-                    
-                    <p>JS中的函数存在着三种角色：普通函数、构造函数、对象方法。同一个函数，调用方式不同，函数的作用不一样，所扮演的角色也不一样。直接调用时就是普通函数，通过new创建对象时就是构造函数，通过对象调用时就是方法。
-                        JS常用的内置对象有window、Date、Array、JSON、RegExp
-                        等，window是浏览器在执行脚本时创建的一个全局对象，主要描述浏览器窗口相关的属性和状态，这个后面会讲到，Date 和 Array
-                        使用场景最多，JSON主要用于对象的序列化和反序列化，还有一个作用就是实现对象的深拷贝。RegExp 即正则表达式，是处理字符串的利器。</p>
-                </div>
-              </div>
-          </div>
-          <div class="section section2">
+            </div>
+        </div>
+      </div>
+      <!-- <div class="section section2">
              
           </div>
           <div class="section section3">
@@ -110,115 +72,49 @@
           </div>
           <div class="section section8">
               
-          </div>
-      </div>
- 
-
+          </div> -->
     </div>
 
-    
-    <!-- js加载区 -->
-    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://crystal-cheng.github.io/crystal.github.io/fancybox/jquery.fancybox.css">
-    <script src="https://crystal-cheng.github.io/crystal.github.io/fancybox/jquery.fancybox.pack.js"></script>
-    <script src="https://crystal-cheng.github.io/crystal.github.io/js/script.js"></script>
-    <script src="https://crystal-cheng.github.io/crystal.github.io/jquery-fullPage/js/jquery.fullPage.js"></script>
-    
-</div>
+
+  </div>
+
+
+  <!-- js加载区 -->
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://crystal-cheng.github.io/crystal.github.io/fancybox/jquery.fancybox.css">
+  <script src="https://crystal-cheng.github.io/crystal.github.io/fancybox/jquery.fancybox.pack.js"></script>
+  <script src="https://crystal-cheng.github.io/crystal.github.io/js/script.js"></script>
+  <script src="https://crystal-cheng.github.io/crystal.github.io/jquery-fullPage/js/jquery.fullPage.js"></script>
+
+  </div>
 </body>
- <!-- 先引入 Vue -->
- <script src="https://unpkg.com/vue/dist/vue.js"></script>
- <!-- 引入组件库 -->
- <script src="https://unpkg.com/element-ui/lib/index.js"></script>
- <script>
-   $('#dowebok').fullpage({
+<!-- 先引入 Vue -->
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<!-- 引入组件库 -->
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script>
+  $('#dowebok').fullpage({
     navigation: true,
     navigationColor: '#000',
-    navigationTooltips: ['首页','项目经验','工作经历','知识分享','待定','暂时不知道','以后再说','未完待续....'],
+    navigationTooltips: ['首页', '项目经验', '工作经历', '知识分享', '待定', '暂时不知道', '以后再说', '未完待续....'],
     showActiveTooltip: true,
     slidesNavigation: true,
     loopBottom: true
-   });
-   new Vue({
-      el: '.top_banner',
-      data() {
-        return {
-          activeIndex: '1',
-        };
+  });
+  new Vue({
+    el: '#user_skill',
+    data() {
+      return {
+        skills:[
+          {classIndex: 'skill_one', skill_name: 'javascipt', content:'这里放置JavaScript技能点',icon:'icon-HOME'},
+          {classIndex: 'skill_two', skill_name: 'html5', content:'这里放置html5技能点',icon:'icon-tongxunlu-'},
+          {classIndex: 'skill_three', skill_name: 'css3', content:'这里放置css3技能点',icon:'icon-xiala-'},
+          {classIndex: 'skill_four', skill_name: 'node', content:'这里放置node技能点',icon:'icon-gongzuotai'},
+          {classIndex: 'skill_five', skill_name: 'Vue', content:'这里放置Vue技能点',icon:'icon-zhifangtu-'},
+        ]
       }
-   });
-   new Vue({
-      el: '.user_info',
-      data() {
-        return {
-          value: 3,
-        }
-      }
-   });
-   new Vue({
-      el: '.user_content',
-      watch: {
-        filterText(val) {
-          this.$refs.tree2.filter(val);
-        }
-      },
-  
-      methods: {
-        filterNode(value, data) {
-          if (!value) return true;
-          return data.label.indexOf(value) !== -1;
-        }
-      },
-  
-      data() {
-        return {
-          filterText: '',
-          data2: [{
-            id: 1,
-            label: 'JavaScript',
-            children: [{
-              id: 4,
-              label: 'JavaScript分享',
-            }]
-          }, {
-            id: 2,
-            label: 'CSS',
-            children: [{
-              id: 5,
-              label: 'CSS分享1'
-            }, {
-              id: 6,
-              label: 'CSS分享22222'
-            }]
-          }, {
-            id: 3,
-            label: 'HTML',
-            children: [{
-              id: 7,
-              label: 'HTML分享1'
-            }, {
-              id: 8,
-              label: 'HTML分享12322'
-            }]
-          },
-          {
-            id: 3,
-            label: 'Node',
-            children: [{
-              id: 7,
-              label: 'Node分享1'
-            }, {
-              id: 8,
-              label: 'Node分享12322'
-            }]
-          }],
-          defaultProps: {
-            children: 'children',
-            label: 'label'
-          }
-        };
-      }
-   });
-   
- </script>
+    }
+  });
+</script>
+
 </html>
