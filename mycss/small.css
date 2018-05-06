@@ -23,8 +23,8 @@
     }
 
     .skill_container .skill:hover:before {
-        height: 30px;
-        width: 30px;
+        height: 20px;
+        width: 35px;
     }
 
     .skill_container .skill:hover .name h5 {
@@ -36,5 +36,11 @@
     }
     .user_info{
         width: 32%;
+    }
+    .name {
+        margin-left: 4px;
+    }
+    .skill_container .skill:hover .iconfont {
+        display: none;
     }
 }
