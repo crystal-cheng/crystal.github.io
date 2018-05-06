@@ -1,3 +1,4 @@
+@import url('style.css');
 /* 模块一 */
 .section1{
     /* background: url("images/01.jpg") center #000 no-repeat; */
@@ -19,7 +20,7 @@
 .content {
     position: relative;
     padding: 50px 20px 20px 20px;
-    width: 70%;
+    width: 55%;
     margin: 0 auto;
     /* height: 60%; */
     box-shadow: 1px 2px 3px #ddd;
@@ -53,12 +54,28 @@
     margin-left: 8px;
     color: #ef6651;
 }
-.user_signname, .user_job, user_github  {
+.user_signname, .user_job, .user_github  {
     font-size: 14px;
     height: 30px;
     line-height: 30px;
     color: #100f0f;;
     margin: 8px 0 4px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.user_github {
+    text-decoration-line: none;
+}
+.icon-shoucang
+{
+    color: #F06292;
+    display: inline-block;
+    font-size: 12px;
+}
+.user_github:hover .github_name {
+    color: #F06292;
 }
 .user_skill {
     margin-left: 50px;
@@ -157,7 +174,7 @@
     transition: all 0.3s;
 }
 .skill_container .skill:hover .name h5 {
-    font-size: 0.7em;
+    font-size: 14px;
     transition: all 0.6s;
   }
 .skill_container .iconfont {
@@ -172,7 +189,12 @@
 
 /* 模块二 */
 .section2{
-    background: url("images/banner2.jpg") center #000;
+    background: linear-gradient(to left, #BE93C5 , #7BC6CC);
+}
+.section2 .main {
+	width: 60%;
+	margin: 0 auto;
+	padding: 0 30px;
 }
 /* 模块二 */
 

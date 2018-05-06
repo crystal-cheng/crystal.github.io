@@ -26,54 +26,91 @@
 <body>
   <div id="container">
     <div id="dowebok">
+      <!-- 模块一 -->
       <div class="section section1">
         <div class="content">
-            <div class="user_info">
-                <img class="user_avatar" src="123.jpg"></img>
-                <div class="user_name">云倾城Blog
-                  <i class="iconfont icon-nv"></i>
-                </div>
-                <!-- <p class="user_signname">有事做，有人爱，有所期待</p> -->
-                <p class="user_job">web前端工程师</p>
-                <p class="user_job">3年工作经历</p>
-                <a class="user_github" href="https://github.com/crystal-cheng">github</a>
+          <div class="user_info">
+            <img class="user_avatar" src="123.jpg"></img>
+            <div class="user_name">云倾城Blog
+              <i class="iconfont icon-nv"></i>
             </div>
-            <div class="user_skill" id="user_skill">
-              <span class="skill_title">技术栈:</span>
-              <div class="skill_container">
-                <div v-for="skill in skills" class="skill" :class="skill.classIndex">
-                  <div class="name">
-                    <h4>{{skill.skill_name}}</h4>
-                    <h5>{{skill.content}}</h5>
-                  </div>
-                  <i class="iconfont icon-nv" :class="skill.icon"></i>
-                </div>		
+            <p class="user_signname">有事做，有人爱，有所期待</p>
+            <p class="user_job">web前端工程师</p>
+            <p class="user_job">3年工作经历</p>
+            <a class="user_github" href="https://github.com/crystal-cheng">
+              <i class="iconfont icon-shoucang"></i>
+              <span class="github_name">github</span>
+            </a>
+          </div>
+          <div class="user_skill" id="user_skill">
+            <span class="skill_title">技术栈:</span>
+            <div class="skill_container">
+              <div v-for="skill in skills" class="skill" :class="skill.classIndex">
+                <div class="name">
+                  <h4>{{skill.skill_name}}</h4>
+                  <h5>{{skill.content}}</h5>
+                </div>
+                <i class="iconfont icon-nv" :class="skill.icon"></i>
               </div>
             </div>
+          </div>
         </div>
       </div>
-      <!-- <div class="section section2">
-             
-          </div>
-          <div class="section section3">
-              
-          </div>
-          <div class="section section4">
-              
-          </div>
+      <!-- 模块一 -->
 
-          <div class="section section5">
-              
-          </div>
-          <div class="section section6">
-              
-          </div>
-          <div class="section section7">
-              
-          </div>
-          <div class="section section8">
-              
-          </div> -->
+      <!-- 模块二 -->
+      <div class="section section2">
+        	<section class="main">
+              <ul class="timeline">
+                <li class="event">
+                  <input type="radio" name="tl-group" checked/>
+                  <label></label>
+                  <div class="thumb user-1"><span>2015</span></div>
+                  <div class="content-perspective">
+                    <div class="content">
+                      <div class="content-inner">
+                        <h3>第一份工作</h3>
+                        <p>工作经历工作经历工作经历工作经历</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="event">
+                    <input type="radio" name="tl-group" checked/>
+                    <label></label>
+                    <div class="thumb user-1"><span>2015</span></div>
+                    <div class="content-perspective">
+                      <div class="content">
+                        <div class="content-inner">
+                          <h3>第一份工作</h3>
+                          <p>工作经历工作经历工作经历工作经历</p>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+              </ul>
+            </section>
+      </div>
+      <!-- 模块二 -->
+      <!-- <div class="section section3">
+
+      </div>
+      <div class="section section4">
+
+      </div>
+
+      <div class="section section5">
+
+      </div>
+      <div class="section section6">
+
+      </div>
+      <div class="section section7">
+
+      </div>
+      <div class="section section8">
+
+      </div> --> -->
     </div>
 
 
@@ -86,6 +123,7 @@
   <script src="https://crystal-cheng.github.io/crystal.github.io/fancybox/jquery.fancybox.pack.js"></script>
   <script src="https://crystal-cheng.github.io/crystal.github.io/js/script.js"></script>
   <script src="https://crystal-cheng.github.io/crystal.github.io/jquery-fullPage/js/jquery.fullPage.js"></script>
+  <script src="https://crystal-cheng.github.io/crystal.github.io/js/modernizr.custom.63321.js"></script>
 
   </div>
 </body>
@@ -106,12 +144,12 @@
     el: '#user_skill',
     data() {
       return {
-        skills:[
-          {classIndex: 'skill_one', skill_name: 'Javascipt', content:'熟练掌握JavaScript以及es6新语法',icon:'icon-HOME'},
-          {classIndex: 'skill_two', skill_name: 'html5', content:'熟悉html以及html5新特性',icon:'icon-tongxunlu-'},
-          {classIndex: 'skill_three', skill_name: 'css3', content:'熟悉css以及css3新特性',icon:'icon-xiala-'},
-          {classIndex: 'skill_four', skill_name: 'Node', content:'node + express + webpack',icon:'icon-gongzuotai'},
-          {classIndex: 'skill_five', skill_name: 'Vue', content:'熟悉Vue框架使用',icon:'icon-zhifangtu-'},
+        skills: [
+          { classIndex: 'skill_one', skill_name: 'Javascipt', content: '熟练掌握JavaScript以及es6新语法', icon: 'icon-HOME' },
+          { classIndex: 'skill_two', skill_name: 'html5 + css3', content: '熟悉html以及html5 + css3新特性', icon: 'icon-tongxunlu-' },
+          { classIndex: 'skill_four', skill_name: 'Node', content: '熟悉Node + express + handlebars + webpack框架', icon: 'icon-gongzuotai' },
+          { classIndex: 'skill_five', skill_name: 'Vue', content: '熟悉Vue框架使用', icon: 'icon-zhifangtu-' },
+          { classIndex: 'skill_three', skill_name: 'echarts + Ubuntu', content: '熟悉使用echarts进行图表数据渲染  + Ubuntu系统使用', icon: 'icon-xiala-' },
         ]
       }
     }
