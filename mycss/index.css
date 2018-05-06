@@ -178,7 +178,7 @@
 
 /* 模块二 */
 .section2{
-    background: linear-gradient(to left, #BE93C5 , #7BC6CC);
+    background: #ccc;
 }
 .section2 .main {
 	width: 60%;
