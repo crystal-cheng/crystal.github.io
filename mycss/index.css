@@ -1,8 +1,7 @@
 @import url('style.css');
 /* 模块一 */
 .section1{
-	background:-webkit-gradient(linear,left top,right bottom,color-stop(0%,#cebe29),color-stop(33%,#9b1f50),color-stop(71%,#2989d8),color-stop(91%,#89b4ff));
-	background:-webkit-linear-gradient(-45deg,#cebe29 0,#9b1f50 33%,#2989d8 71%,#89b4ff 91%);
+
 	
 	/* -webkit-background-size:100% 100%;
 	-moz-background-size:100% 100%; */
