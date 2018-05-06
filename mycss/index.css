@@ -9,6 +9,7 @@
 	background:linear-gradient(135deg,#cebe29 0,#9b1f50 33%,#2989d8 71%,#89b4ff 91%);
     filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#cebe29',endColorstr='#89b4ff',GradientType=1); */
     background: #ccc;
+
 }
 
 /* 左侧部分 */
@@ -21,6 +22,7 @@
     box-shadow: 1px 2px 3px #ddd;
     opacity: 0.9;
     background: #fff;
+    z-index: 99999;
 }
 .user_info{
     float: left;
@@ -187,10 +189,11 @@
     background: linear-gradient(to left, #BE93C5 , #7BC6CC);
 }
 .section2 .main {
-	width: 60%;
-	margin: 0 auto;
-	padding: 0 30px;
+    width: 60%;
+    margin: 0 auto;
+    padding: 0 30px;
 }
+
 /* 模块二 */
 
 /* 模块三 */
