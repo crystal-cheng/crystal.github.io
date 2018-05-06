@@ -27,8 +27,11 @@
     .skill_container .skill:hover .name h5 {
         font-size: 12px;
     }
-    
+
     .skill_container .iconfont {
         font-size: 12px;
+    }
+    .user_info{
+        width: 32%;
     }
 }
