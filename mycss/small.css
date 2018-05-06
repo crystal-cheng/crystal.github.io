@@ -1,0 +1,34 @@
+/* 适配小屏幕 */
+@media screen and (max-width: 980px) {
+    .user_avatar{
+        width: 60px;
+        height: 60px;
+    }
+
+    .user_name{
+        font-size: 12px;
+    }
+
+    .user_signname, .user_job, user_github  {
+        font-size: 12px;
+        height: 20px;
+        line-height: 20px;
+    }
+
+    .skill_title {
+        height: 20px;
+    }
+
+    .skill_container .skill:hover:before {
+        height: 30px;
+        width: 30px;
+    }
+
+    .skill_container .skill:hover .name h5 {
+        font-size: 12px;
+    }
+    
+    .skill_container .iconfont {
+        font-size: 12px;
+    }
+}
