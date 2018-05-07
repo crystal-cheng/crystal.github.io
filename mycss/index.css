@@ -202,7 +202,7 @@
     background-image: url("images/html5.jpg");
 }
 .skill_container .skill.skill_three:before{
-    background-image: url("images/css3.jpg");
+    background-image: url("images/echarts.jpg");
 }
 .skill_container .skill.skill_four:before{
     background-image: url("images/node.jpg");
@@ -239,10 +239,14 @@
 
 /* 模块二 */
 .section2{
-    background: linear-gradient(to left, #BE93C5 , #7BC6CC);
+    background: linear-gradient(to left, #e0c3fc ,#8ec5fc);
 }
 .timeDate {
     display: none;
 }
 
 /* 模块二 */
+
+.section3{
+    background: linear-gradient(to left, #BE93C5 , #7BC6CC);
+}
