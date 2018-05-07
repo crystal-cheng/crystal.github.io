@@ -22,11 +22,12 @@
 }
 .content_info {
     margin-top: 20px;
+    margin-left: 10%;
 }
 .intro_info {
     display: block;
-    font: bold 200% Consolas, Monaco, monospace;
-    white-space: nowrap;
+    font: bold 160% Consolas, Monaco, monospace;
+    white-space: inherit;
     width: 100%; 
     margin: 2em 1em;
     overflow: hidden;

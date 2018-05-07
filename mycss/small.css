@@ -1,4 +1,10 @@
 /* 适配小屏幕 */
+@media screen and (min-width: 1000px) { 
+    .intro_info {
+        white-space: nowrap;
+    }
+}
+
 @media screen and (max-width: 780px) {
     .intro_info {
         font-size: 12px;
@@ -56,7 +62,7 @@
     }
 
     .skill_container {
-        width: 72%;
+        width: 88%;
     }
     .skill_container .skill {
         height: 50px;
