@@ -1,7 +1,8 @@
 /* 适配小屏幕 */
 @media screen and (max-width: 980px) {
     .content {
-        width: 80%;
+        width: 90%;
+        padding: 20px 0px 20px 10px;
     }
     .user_avatar{
         width: 60px;
