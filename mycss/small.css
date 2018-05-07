@@ -41,6 +41,7 @@
         font-size: 12px;
     }
     .user_info{
+        display: none;
         width: 32%;
     }
     .name {
