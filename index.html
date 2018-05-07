@@ -18,6 +18,7 @@
   <!-- 引入element-ui样式 -->
   <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
   <link rel="stylesheet" href="mycss/index.css">
+  <link rel="stylesheet" href="mycss/style.css">
   <link rel="stylesheet" href="mycss/small.css">
   <link rel="stylesheet" href="mycss/iconfont/iconfont.css">
   <link rel="stylesheet" href="jquery-fullPage/css/index.css">
@@ -60,36 +61,67 @@
 
       <!-- 模块二 -->
       <div class="section section2">
-        	 <!-- <section class="main">
-              <ul class="timeline">
-                <li class="event">
-                  <input type="radio" name="tl-group" checked/>
-                  <label></label>
-                  <div class="thumb user-1"><span>2015</span></div>
-                  <div class="content-perspective">
-                    <div class="content">
-                      <div class="content-inner">
-                        <h3>第一份工作</h3>
-                        <p>工作经历工作经历工作经历工作经历</p>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li class="event">
-                    <input type="radio" name="tl-group" checked/>
-                    <label></label>
-                    <div class="thumb user-1"><span>2015</span></div>
-                    <div class="content-perspective">
-                      <div class="content">
-                        <div class="content-inner">
-                          <h3>第一份工作</h3>
-                          <p>工作经历工作经历工作经历工作经历</p>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-              </ul>
-            </section>  -->
+        <ul id='timeline'>
+          <li class='work'>
+            <input class='radio' id='work5' name='works' type='radio' checked>
+            <div class="relative">
+              <label for='work5'>技鼎软件科技</label>
+              <span class='date'>2015年--2017年</span>
+              <span class='circle'></span>
+            </div>
+            <div class='time_content'>
+              <p>项目简介：        
+                  该系统是基于JQuery easyui+Spring MVC的企业级管理系统，旨在实现企业办公流程自动化以及无纸化办公目标。将企业员工请假流程、员工入职离职流程、费用报销流程、出差申请流程进行系统化设计，实现申请无纸化操作审核。
+            </p>
+            <p>
+                责任描述：      
+                <p>1.负责系统的前端界面实现，根据系统的界面需求分析，确定具体功能以及详细需求；</p>
+                <p>2.jQuery easyui+html+css实现系统前台界面设计</p> 
+                <p>3.编写JavaScript、jQuery代码实现界面交互效果 </p>  
+                <p>4.运用Ajax实现前后端数据交互</p>  
+            </p>
+            </div>
+          </li>
+          <li class='work'>
+            <input class='radio' id='work4' name='works' type='radio'>
+            <div class="relative">
+              <label for='work4'>技鼎软件科技</label>
+              <span class='date'>2017年--2018年</span>
+              <span class='circle'></span>
+            </div>
+            <div class='time_content'>
+              <p>项目简介：       
+                  该项目是基于JQuery easyui+Spring MVC的企业级管理系统,旨在为不同的专案项目自定义其相应的开发模块以及相应人员时数统计，最后估算出项目开发总时数以及相应数据供产品经理参考。为产品经理在项目成案初期与客户讨论项目时数以及预估交付日期提供有力依据。
+                  <p>
+                      责任描述：        
+                      <p> 1.负责系统的需求分析设计，确定功能以及详细界面需求；</p>
+                      <p> 2.jQuery easyui+html+css实现系统前台界面设计</p>
+                      <p> 3.编写JavaScript、jQuery代码实现界面交互效果</p>
+                      <p> 4.运用Ajax实现前后端数据交互</p></p>
+                  </p>
+            </div>
+          </li>
+          <li class='work'>
+            <input class='radio' id='work3' name='works' type='radio'>
+            <div class="relative">
+              <label for='work3'>安元</label>
+              <span class='date'>2018</span>
+              <span class='circle'></span>
+            </div>
+            <div class='time_content'>
+              <p> 启业云平台以实现灵活个性化应用，简单可依赖的需求为基础，拥有强大的个性配置能力。它主要由数据库引擎、工作流引擎、报表引擎、系统权限引擎、数据挖掘引擎、物联网平台、移动应用平台等主要功能模块组成，利用启业云PaaS，平台可以快速构建各类业务应用系统，实现客户的所有业务需求能够“零代码”级在线可视化快速配置。
+              </p>
+              <p> 责任描述：
+                <p>1.负责启业云官网页面维护与优化</p>
+                <p>2.利用node结合echarts分析12种图表类型，进行业务数据渲染</p>
+                <p>3.负责启业云整体用户体验与界面优化，公共模块维护、主题换肤、新手引导、全局菜单、运营通告维护</p>
+                <p>4.启业云运营模块维护，分析用户使用率、每日活跃用户、用户分布率</p>
+                <p>5.运用node+express + handlebars + vue框架进行项目开发</p>
+              </p>
+            </div>
+          </li>
+        </ul>
+        
       </div>
       <!-- 模块二 -->
       <!-- <div class="section section3">
@@ -134,7 +166,7 @@
   $('#dowebok').fullpage({
     navigation: true,
     navigationColor: '#000',
-    navigationTooltips: ['首页', '项目经验', '工作经历', '知识分享', '待定', '暂时不知道', '以后再说', '未完待续....'],
+    navigationTooltips: ['', '项目经验', '工作经历', '知识分享', '待定', '暂时不知道', '以后再说', '未完待续....'],
     showActiveTooltip: true,
     slidesNavigation: true,
     loopBottom: true
@@ -147,7 +179,7 @@
           { classIndex: 'skill_one', skill_name: 'Javascipt', content: '熟练掌握JavaScript以及es6新语法', icon: 'icon-HOME' },
           { classIndex: 'skill_two', skill_name: 'html5 + css3', content: '熟悉html以及html5 + css3新特性', icon: 'icon-tongxunlu-' },
           { classIndex: 'skill_four', skill_name: 'Node', content: '熟悉Node + express + handlebars + webpack框架', icon: 'icon-gongzuotai' },
-          { classIndex: 'skill_five', skill_name: 'Vue', content: '熟悉Vue框架使用', icon: 'icon-zhifangtu-' },
+          { classIndex: 'skill_five', skill_name: 'Vue', content: '熟悉Vue框架以及vuex使用', icon: 'icon-zhifangtu-' },
           { classIndex: 'skill_three', skill_name: 'echarts', content: '熟悉使用echarts进行图表数据渲染  + Ubuntu系统使用', icon: 'icon-xiala-' },
         ]
       }

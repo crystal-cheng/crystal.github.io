@@ -1,5 +1,5 @@
 /* 适配小屏幕 */
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 780px) {
     .content {
         width: 90%;
         padding: 20px 4px 20px 10px;
@@ -51,7 +51,7 @@
     }
 
     .skill_container {
-        width: 76%;
+        width: 72%;
     }
     .skill_container .skill {
         height: 50px;
