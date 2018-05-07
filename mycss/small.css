@@ -1,5 +1,5 @@
 /* 适配小屏幕 */
-@media screen and (min-width: 1000px) { 
+@media screen and (min-width: 1500px) { 
     .intro_info {
         white-space: nowrap;
     }
