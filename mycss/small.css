@@ -6,6 +6,9 @@
 }
 
 @media screen and (max-width: 780px) {
+    .timeDate {
+        display: inline-block;
+    }
     .intro_info {
         font-size: 12px;
         white-space: inherit;

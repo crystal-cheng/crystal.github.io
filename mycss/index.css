@@ -241,30 +241,8 @@
 .section2{
     background: linear-gradient(to left, #BE93C5 , #7BC6CC);
 }
+.timeDate {
+    display: none;
+}
 
 /* 模块二 */
-
-/* 模块三 */
-.section3{
-    /* background: url("images/banner3.jpg") center #000; */
-}
-/* 模块三 */
-
-/* 模块四 */
-.section4{
-    background: url("images/banner4.jpg") center #000;
-}
-/* 模块四 */
-
-.section5{
-    background: url("images/banner5.jpg") center #000;
-}
-.section6{
-    background: url("images/banner6.jpg") center #000;
-}
-.section7{
-    background: url("images/banner7.jpg") center #000;
-}
-.section8{
-    background: url("images/banner8.jpg") center #000;
-}

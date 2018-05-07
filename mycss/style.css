@@ -146,8 +146,8 @@
 	  width: 85%;
 	  font-size: 1.1em;
 	  white-space: nowrap;
-	  text-overflow: ellipsis;
-	  overflow: hidden;
+	  /* text-overflow: ellipsis;
+	  overflow: hidden; */
 	  display: block;
 	  transform: translateX(18px);
 	}
