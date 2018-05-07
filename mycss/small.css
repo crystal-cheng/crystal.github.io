@@ -2,7 +2,7 @@
 @media screen and (max-width: 980px) {
     .content {
         width: 90%;
-        padding: 20px 0px 20px 10px;
+        padding: 20px 4px 20px 10px;
     }
     .user_avatar{
         width: 60px;
@@ -48,5 +48,16 @@
     .skill_container .skill:hover .name h5 {
         font-size: 12px;
         transition: all 0.6s;
-      }
+    }
+
+    .skill_container {
+        width: 76%;
+    }
+    .skill_container .skill {
+        height: 50px;
+    }
+    .skill_container .skill:hover {
+        height: 70px;
+        transition: all 0.3s;
+    }
 }
