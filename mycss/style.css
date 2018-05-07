@@ -142,6 +142,7 @@
 	}
   
 	label {
+	  top: 6px !important;
 	  width: 85%;
 	  font-size: 1.1em;
 	  white-space: nowrap;
@@ -152,7 +153,9 @@
 	}
   
 	.time_content {
-	  padding-top: 45px;
+	  width: 150%;
+	  font-size: 12px;
+	  padding-top: 30px;
 	  border-color: #eee9dc;
 	}
 	.time_content:before, .time_content:after {
