@@ -28,6 +28,27 @@
   <div id="container">
     <div id="dowebok">
       <!-- 模块一 -->
+      <div class="section section0">
+        <div class="user_content_info">
+            <img class="user_avatar_info" src="mycss/images/mm.JPG">
+            <div class="content_info">
+                <p class="intro_info">
+                    乐观开朗，谦虚好学，萌妹子一枚，对互联网保持高度的兴趣和关注度
+                </p>
+                <p class="intro_info">
+                    熟悉web前端开发流程，热衷于web前端开发工作
+                </p>
+                <p class="intro_info">
+                   技术栈：Node + express + webpack + vue + html5 + css3 + Javascipt
+                </p>
+                <p class="intro_info">
+                    坐标南京,三年工作经验
+                </p>
+            </div>
+        </div>
+      </div>
+      <!-- 模块一 -->
+      <!-- 模块一 -->
       <div class="section section1">
         <div class="content">
           <div class="user_info">
@@ -35,13 +56,15 @@
             <div class="user_name">云倾城Blog
               <i class="iconfont icon-nv"></i>
             </div>
-            <p class="user_signname">有事做，有人爱，有所期待</p>
-            <p class="user_job">web前端工程师</p>
-            <p class="user_job">3年工作经历</p>
-            <a class="user_github" href="https://github.com/crystal-cheng">
+            <p class="user_signname"><i class="iconfont icon-HOME"></i>有事做，有人爱，有所期待</p>
+            <p class="user_job"><i class="iconfont icon-globe"></i>web前端工程师</p>
+            <p class="user_local"><i class="iconfont icon-dingwei"></i>坐标南京</p>
+            <p class="user_job"><i class="iconfont icon-wenben"></i>3年工作经历</p>
+            <p class="user_email"><i class="iconfont icon-xiaoxi"></i>Email</p>
+            <p class="user_github" href="https://github.com/crystal-cheng">
               <i class="iconfont icon-shoucang"></i>
               <span class="github_name">github</span>
-            </a>
+            </p>
           </div>
           <div class="user_skill" id="user_skill">
             <span class="skill_title">技术栈:</span>
@@ -168,7 +191,7 @@
   $('#dowebok').fullpage({
     navigation: true,
     navigationColor: '#000',
-    navigationTooltips: ['', '项目经验', '工作经历', '知识分享', '待定', '暂时不知道', '以后再说', '未完待续....'],
+    navigationTooltips: ['自我介绍','技术栈', '项目经验', '工作经历', '知识分享', '待定', '暂时不知道', '以后再说', '未完待续....'],
     showActiveTooltip: true,
     slidesNavigation: true,
     loopBottom: true

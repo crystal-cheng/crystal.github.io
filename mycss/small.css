@@ -1,5 +1,9 @@
 /* 适配小屏幕 */
 @media screen and (max-width: 780px) {
+    .intro_info {
+        font-size: 12px;
+        white-space: inherit;
+    }
     .content {
         width: 90%;
         padding: 20px 4px 20px 10px;

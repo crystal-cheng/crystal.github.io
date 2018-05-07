@@ -1,3 +1,40 @@
+.fp-tableCell {
+    vertical-align: top !important;
+}
+/* 自我介绍 */
+.section0{
+    background: linear-gradient(to left, #a8edea , #fed6e3);
+   
+}
+.user_content_info {
+    width: 65%;
+    margin: 0 auto;
+    top: 18%;
+    position: relative;
+}
+.user_avatar_info{
+    display: block;
+    width: 150px;
+    height: 150px;
+    border: 1px solid #bc8c8c;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+.content_info {
+    margin-top: 20px;
+}
+.intro_info {
+    display: block;
+    font: bold 200% Consolas, Monaco, monospace;
+    white-space: nowrap;
+    width: 100%; 
+    margin: 2em 1em;
+    overflow: hidden;
+    animation: typing 5s steps(1200, end), blink-caret .1000s step-end infinite alternate;
+}
+@keyframes typing { from { width: 0; } }
+@keyframes blink-caret { 50% { border-color: transparent; } }
+/* 自我介绍 */
 /* 模块一 */
 .section1{
 	background:-moz-linear-gradient(-45deg,#cebe29 0,#9b1f50 33%,#2989d8 71%,#89b4ff 91%);
@@ -21,6 +58,7 @@
     opacity: 0.9;
     background: #fff;
     z-index: 99999;
+    top:20%;
 }
 .user_info{
     float: left;
@@ -29,11 +67,25 @@
     text-align: center;
     margin-right: 4px;
 }
+.user_info p, .user_info a {
+    text-align: left;
+    width: 95%;
+    display: block;
+    color: #000;
+    float: left;
+    margin-left: 10%;
+}
+.user_info i {
+    display: inline-block;
+    margin-right: 4px;
+    color: #F06292;
+}
 .user_avatar{
     display: block;
     width: 120px;
     height: 120px;
-    margin: 0 auto;
+    /* margin: 0 auto; */
+    margin-left: 10%;
     border-radius: 50%;
     box-shadow: 1px 2px 3px #ddd;
 }
@@ -50,12 +102,12 @@
     margin-left: 8px;
     color: #ef6651;
 }
-.user_signname, .user_job, .user_github  {
+.user_signname, .user_job, .user_github, .user_email, .user_local {
     font-size: 14px;
     height: 30px;
     line-height: 30px;
     color: #100f0f;;
-    margin: 8px 0 4px 0;
+    /* margin: 8px 0 4px 0; */
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -63,6 +115,7 @@
 
 .user_github {
     text-decoration-line: none;
+    cursor: pointer;
 }
 .icon-shoucang
 {
