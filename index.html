@@ -18,7 +18,8 @@
   <!-- 引入element-ui样式 -->
   <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
   <link rel="stylesheet" href="mycss/index.css">
-  <link rel="stylesheet" href="mycss/style.css">
+  <link rel="stylesheet" href="mycss/section2.css">
+  <link rel="stylesheet" href="mycss/section3.css">
   <link rel="stylesheet" href="mycss/small.css">
   <link rel="stylesheet" href="mycss/iconfont/iconfont.css">
   <link rel="stylesheet" href="jquery-fullPage/css/index.css">
@@ -50,7 +51,7 @@
       <!-- 模块一 -->
       <!-- 模块一 -->
       <div class="section section1">
-        <div class="content">
+        <div class="content_wrap">
           <div class="user_info">
             <img class="user_avatar" src="123.jpg"></img>
             <div class="user_name">云倾城Blog
@@ -84,6 +85,84 @@
 
       <!-- 模块二 -->
       <div class="section section2">
+          <ul id="cardArea" class="card-area clearfix">
+              <li class="card-item active">
+                <div class="card">
+                  <div class="card-title title-even">
+                    <div class="content">
+                      <h1>技鼎软件科技</h1>
+                      <p class="short-info">2017.7--2018.5</p>
+                    </div>
+                  </div>
+                  <div class="card-content content-first bg-e8e8e8">
+                    <ul class="content-first-list">
+                      <li>OA-eForm系统开发</li>
+                      <li>专案估时系统开发</li>
+                      <li>台铁专案</li>
+                      <li>公司官网</li>
+                    </ul>
+                  </div>
+                  <div class="card-content content-second">
+                    <div class="main-info">
+                      <p class="main-tip">任职公司：技鼎软件科技(南京)有限公司      职位：项目工程师</p>
+                      <p class="main-desc">工作内容：</p>
+                      <p class="main-desc">1.使用div+css+javascript进行网站设计与开发 </p>
+                      <p class="main-desc">2.使用bootstrap框架快速实现响应式网站开发  </p>
+                      <p class="main-desc">3.基于jQuery EasyUI实现企业级应用系统前台开发  </p>
+                      <p class="main-desc">4.运用Ajax动态加载数据，实现前后端数据交互，并解析json数据于前端界面</p>
+                      <p class="main-desc"> 5.参与SA、SD设计文档编写</p>
+                      <a href="#" target="_blank">
+                      </a>
+                    </div>
+                    <ul class="other-info clearfix">
+                      <li class="other-info-list">OA-eForm系统开发</li>
+                      <li class="other-info-list">专案估时系统开发</li>
+                      <li class="other-info-list">台铁专案</li>
+                      <li class="other-info-list">公司官网</li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="card-item">
+                <div class="card">
+                  <div class="card-title title-even">
+                    <div class="content">
+                      <!-- <i class="iconfont icon-global"></i> -->
+                      <h1>南京安元</h1>
+                      <p class="short-info">2017.7--至今</p>
+                    </div>
+                  </div>
+                  <div class="card-content content-first bg-e1e1e1">
+                    <ul class="content-first-list">
+                      <li>全局菜单</li>
+                      <li>运营通告</li>
+                      <li>echarts地图省市区上钻下钻</li>
+                      <li>应用市场</li>
+                      <li>Node生成echarts图片</li>
+                    </ul>
+                  </div>
+            
+                  <div class="card-content content-second">
+                    <div class="main-info">
+                        <p class="main-tip">任职公司：南京安元科技      职位：web前端工程师</p>
+                        <p class="main-desc">工作内容：</p>
+                        <p class="main-desc">1.负责企业级Saas产品前端功能开发和维护，完成产品迭代功能开发，推动产品体验优化</p>
+                        <p class="main-desc">2.与产品、UI沟通，实现产品在交互方面的设计以及优化，与后端协同接口联调，实现前后端数据交互 </p>
+                        <p class="main-desc">3. 优化网站前端功能，维护产品前端开发框架 </p>
+                      <a href="market/" target="_blank">
+                      </a>
+                    </div>
+                    <ul class="other-info clearfix">
+                      <li class="other-info-list">全局菜单</li>
+                      <li class="other-info-list">运营通告</li>
+                      <li class="other-info-list">echarts地图省市区上钻下钻</li>
+                      <li class="other-info-list">应用市场</li>
+                      <li class="other-info-list">Node生成echarts图片</li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+            </ul>
       </div>
       <!-- 模块二 -->
 
@@ -166,14 +245,14 @@
   <script src="https://crystal-cheng.github.io/crystal.github.io/fancybox/jquery.fancybox.pack.js"></script>
   <script src="https://crystal-cheng.github.io/crystal.github.io/js/script.js"></script>
   <script src="https://crystal-cheng.github.io/crystal.github.io/jquery-fullPage/js/jquery.fullPage.js"></script>
-
+  <script type="text/javascript" src="js/function.js"></script>
   </div>
 </body>
 <!-- 先引入 Vue -->
 <script src="https://unpkg.com/vue/dist/vue.js"></script>
 <!-- 引入组件库 -->
 <script src="https://unpkg.com/element-ui/lib/index.js"></script>
-<script>
+<script type="text/javascript">
   $('#dowebok').fullpage({
     navigation: true,
     navigationColor: '#000',
@@ -182,6 +261,11 @@
     slidesNavigation: true,
     loopBottom: true
   });
+
+  $(function() {
+    $("#cardArea").cardArea()
+  });
+
   new Vue({
     el: '#user_skill',
     data() {

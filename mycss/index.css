@@ -49,7 +49,7 @@
 }
 
 /* 左侧部分 */
-.content {
+.content_wrap {
     position: relative;
     padding: 50px 20px 20px 20px;
     width: 55%;

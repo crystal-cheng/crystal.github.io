@@ -6,6 +6,36 @@
 }
 
 @media screen and (max-width: 780px) {
+    /* section2 */
+    .card-area .card-item .card .card-title h1 {
+        font-size: 12px;
+    }
+
+    .card-area .card-item .card .card-title .short-info {
+        margin-bottom: 0; 
+    }
+    .card-area .active .card .card-title .short-info
+    {
+        margin-bottom:20px;
+    }
+    .card-area .card-item .card .card-content.content-first .content-first-list {
+        font-size: 12px;
+    }
+    .card-area 
+    {
+        margin: 82px auto 0;
+        position: relative;
+        width: 99%;
+        height: auto;
+        font-size: 12px;
+        left: 8%;
+    }
+    .card-area .card-item.active
+    {
+        width:75%;
+    } 
+    /* section2 */
+
     .timeDate {
         display: inline-block;
     }
@@ -13,7 +43,7 @@
         font-size: 12px;
         white-space: inherit;
     }
-    .content {
+    .content_wrap {
         width: 90%;
         padding: 20px 4px 20px 10px;
     }
