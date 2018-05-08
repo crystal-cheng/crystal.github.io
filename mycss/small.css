@@ -16,6 +16,17 @@
     .card-area .card-item .card .card-content .other-info
     {
         padding-top: 0px;
+        height: 83px;
+    }
+    .card-area .card-item
+    {
+        height: 500px;
+    }
+    .card-area .card-item.active {
+        height: 500px;
+    }
+    .card-area .card-item .card .card-content {
+        height: 400px;
     }
     .card-area .card-item .card .card-content .other-info .other-info-list {
         white-space: nowrap;
